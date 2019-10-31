@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="261" key="DIALOG_WIDTH"/>
+		<item value="600" key="DIALOG_Y_ORIGIN"/>
+		<item value="378" key="DIALOG_HEIGHT"/>
+		<item value="1576" key="DIALOG_X_ORIGIN"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="" key="selection"/>
+		<list key="findhistory">
+			<item value="메인"/>
+			<item value="-1"/>
+			<item value="sp"/>
+			<item value="setDate"/>
+			<item value="tb_sp"/>
+			<item value="for"/>
+			<item value="while"/>
+			<item value="databa"/>
+		</list>
+		<list key="replacehistory">
+			<item value="setDay"/>
+			<item value="userMenu"/>
+			<item value=" TODO"/>
+			<item value="MyPage"/>
+			<item value="Center"/>
+			<item value="SellBook"/>
+			<item value="getSPList(&quot;ID&quot;, ,&quot;SELECT&quot;, true)"/>
+			<item value="rtnSPListSize(Session.loginUser.getId())"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="404" key="DIALOG_Y_ORIGIN"/>
+		<item value="729" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

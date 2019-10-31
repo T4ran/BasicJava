@@ -1,0 +1,36 @@
+package dao;
+
+import vo.RecentListVO;
+import data.Database;
+
+public class RecentListDaoImpl implements RecentListDao {
+
+	private static RecentListDaoImpl instance;
+	
+	private RecentListDaoImpl(){
+		
+	}
+	
+	public static RecentListDaoImpl getInstance(){
+		if(instance == null)
+		{
+			instance = new RecentListDaoImpl();
+		}
+		return instance;
+	}
+	
+	Database database = Database.getInstance();
+
+	@Override
+	public RecentListVO getRecentList(String key1, String value, String key2, int number) {
+		// TODO key1에는 아이디, key2에는 number가 파라미터로 들어옴
+		
+		for(int i=0;i<database.tb_recentList.size();i++)
+		{
+			
+		}
+		
+		return null;
+	}
+
+}

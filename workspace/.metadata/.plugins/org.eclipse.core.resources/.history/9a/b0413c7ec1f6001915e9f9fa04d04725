@@ -1,0 +1,6 @@
+package dao;
+
+public interface BookDao {
+	//리턴값으로 tb_bookList의 사이즈를 반환하는 메서드
+	void rtnBookSize();
+}

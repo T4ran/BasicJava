@@ -1,0 +1,7 @@
+//작성자 한승희
+package service;
+
+public interface RecentListService {
+	//기능 : 입력, 열람
+	//입력의 경우 
+}

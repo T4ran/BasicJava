@@ -1,0 +1,11 @@
+package dao;
+
+public class BookDaoImpl implements BookDao{
+
+	@Override
+	public void rtnBookSize() {
+		//tb_bookList의 크기를 반환하는 메서드
+		
+	}
+
+}

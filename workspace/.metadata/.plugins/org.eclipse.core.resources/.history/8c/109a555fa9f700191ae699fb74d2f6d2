@@ -1,0 +1,6 @@
+package dao;
+
+public interface ReviewDao {
+	//리뷰 등록
+	void rtnNumber();
+}

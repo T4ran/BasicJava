@@ -1,0 +1,17 @@
+package service;
+
+public class ReviewServiceImpl implements ReviewService{
+
+	@Override
+	public void write() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

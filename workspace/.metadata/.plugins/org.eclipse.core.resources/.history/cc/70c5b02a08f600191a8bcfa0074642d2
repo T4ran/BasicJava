@@ -1,0 +1,22 @@
+package service;
+
+public interface RecentListService {
+	
+	private static RecentListService instance;
+	
+	private RecentListService(){
+		
+	}
+	
+	public static RecentListService getInstance(){
+		if(instance == null)
+		{
+			instance = new RecentListService();
+		}
+		return instance;
+	}
+	
+	SPListDao spListDao = SPListDaoImpl.getInstance();		//인스턴스 객체를 생성하기위한 문장
+															//getInstance()메서드를 사용하여 instance값이 null일 경우에만
+															//새로 객체를 생성한다.
+}

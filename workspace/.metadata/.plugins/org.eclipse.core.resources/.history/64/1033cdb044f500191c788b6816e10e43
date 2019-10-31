@@ -1,0 +1,102 @@
+/*
+작성자 : 한승희
+ */
+package dao;
+
+import java.util.HashMap;
+import java.util.Set;
+
+import vo.SPListVO;
+import data.Database;
+
+public class SPListDaoImpl implements SPListDao{
+
+	private static SPListDaoImpl instance;
+	
+	private SPListDaoImpl(){
+		
+	}
+	
+	public static SPListDaoImpl getInstance(){
+		if(instance == null)
+		{
+			instance = new SPListDaoImpl();
+		}
+		return instance;
+	}
+	
+	Database database = Database.getInstance();
+
+	@Override
+	public SPListVO getSPList(String key, int value) {
+		// TODO SPLISTNUM을 받아서 일치하는 배열리스트를 찾는다.
+		for(int i=0;i<database.tb_spList.size();i++)
+		{
+			SPListVO splist = database.tb_spList.get(i);
+			
+			if(key.equals("SPLISTNUM"))
+			{
+				if(splist.getNumber()==value)
+				{
+					return splist;
+				}
+			}
+		}
+		
+		return null;
+	}
+
+	@Override
+	public SPListVO getSPList(HashMap<String, String> param) {
+		// TODO HashMap형식 splist호출
+		SPListVO rtnSPList = null;
+		
+		for(int i=0;i<database.tb_spList.size();i++)
+		{
+			SPListVO splist = database.tb_spList.get(i);
+			boolean flag=true;
+			
+			Set<String> keys = param.keySet();
+			for(String key : keys)
+			{
+				int value = Integer.parseInt(param.get(key));
+				if(key.equals("SPLISTNUM"))
+				{
+					if(!(splist.getNumber()==value))
+					{
+						flag=false;
+					}
+				}
+				if(flag)
+				{
+					rtnSPList = splist;
+				}
+			}
+		}
+		
+		return rtnSPList;
+	}
+
+	@Override
+	public void insertList(SPListVO splist) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int rtnSPListSize() {
+		//SPList사이즈를 반환한다.
+		int size = 0;
+		
+		size = database.tb_spList.size();
+		
+		return size;
+	}
+
+	@Override
+	public void deleteList(SPListVO splist) {
+		// TODO 리스트 삭제 메서드
+		database.tb_spList.remove(splist);
+	}
+	
+}

@@ -1,0 +1,16 @@
+package controller;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		//userId를 받아서 사용자가 구매한 전체 리스트를 출력한다.
+				System.out.println("===============================================");
+				System.out.println("번호\t제목\t\t\t가격\t날짜");
+				/*for(int i=recentListDao.matchedCnt(userId);i>0;i--)//TODO 수정필요. i초기값 사이즈 반환.
+				{
+					System.out.println();
+				}*/
+				System.out.println("===============================================");
+	}
+
+}

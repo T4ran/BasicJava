@@ -1,0 +1,25 @@
+package dao;
+
+import data.Database;
+
+public class ReviewDaoImpl implements ReviewDao{
+	private static ReviewDaoImpl instance;
+		
+		private ReviewDaoImpl(){}
+		
+		public static ReviewDaoImpl getInstance(){
+			if(instance == null){
+				instance = new ReviewDaoImpl();
+			}
+			return instance;
+		} //SearchDaoImpl의 싱글턴 타입의 생성자 생성
+	
+	
+	Database database = Database.getInstance();
+
+	@Override
+	public void rtnNumber() {
+		// TODO Auto-generated method stub
+		
+	}
+}

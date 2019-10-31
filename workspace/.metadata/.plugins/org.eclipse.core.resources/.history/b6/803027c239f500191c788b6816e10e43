@@ -1,0 +1,46 @@
+/*
+controller 패키지에는 콘솔창을 실행할 MainPrint클래스와
+제어를 담당하는 Controller클래스가 있다.
+*/
+package controller;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import data.Database;
+import service.SPListService;
+import service.SPListServiceImpl;
+
+public class MainPrint extends Controller{		//start()메서드를 사용하기 위해서 Controller클래스를 상속받았다.
+	public static void main(String[] args) {
+		//start();								//Controller클래스의 start()메서드를 실행.
+		
+		/*SPListService splistservice = SPListServiceImpl.getInstance();	//TODO 테스트용
+		Database data = Database.getInstance();
+		
+		splistservice.allSelect();
+		//splistservice.select();
+		
+		System.out.println();
+		
+		for(int i=0;i<data.tb_spList.size();i++)
+			System.out.println(data.tb_spList.get(i).isSelect());*/
+		
+		Scanner s = new Scanner(System.in);		//답변을 받을 스캐너 변수
+		
+		System.out.print("선택하실 목록의 번호들을 입력해주세요 > ");
+		String selectNum[] = s.nextLine().split(",");
+		System.out.println(selectNum);
+		System.out.println(Arrays.toString(selectNum));
+		//String selectNum[] = s.nextLine().split(",");	//받은 번호(String)을 ","로 나누어 String 배열 저장 //선택받을 번호 String타입 배열
+		
+		int number[] = new int[selectNum.length];			//String타입을 int로 변환하여 받을 변수 배열
+		for(int i=0;i<number.length;i++)
+		{
+			number[i] = Integer.parseInt(selectNum[i]);		//String배열을 int배열로 변환하기위한 반복작업
+		}
+		
+		System.out.println(Arrays.toString(number));
+	}
+}
+//MainPrint클래스 끝.

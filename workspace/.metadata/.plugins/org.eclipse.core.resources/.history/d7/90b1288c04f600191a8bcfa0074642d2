@@ -1,0 +1,44 @@
+package service;
+
+import java.util.Scanner;
+
+import dao.ReviewDao;
+import dao.ReviewDaoImpl;
+
+public class ReviewServiceImpl implements ReviewService{
+	
+private static ReviewServiceImpl instance;
+	
+	private ReviewServiceImpl(){
+		
+	}
+	
+	public static ReviewServiceImpl getInstance(){
+		if(instance == null)
+		{
+			instance = new ReviewServiceImpl();
+		}
+		return instance;
+	}
+	
+	ReviewDao reviewDao = ReviewDaoImpl.getInstance();
+
+	@Override
+	public void write() {
+		//리뷰 글쓰기	//유저가 씀
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("리뷰 내용을 써주세요 : ");
+		String contents = s.nextLine();
+		
+		//리뷰를 데이터 베이스에 올리는 작업
+		
+	}
+
+	@Override
+	public void delete() {
+		//리뷰 삭제	//관리자만 쓸수있음
+		
+	}
+	
+}

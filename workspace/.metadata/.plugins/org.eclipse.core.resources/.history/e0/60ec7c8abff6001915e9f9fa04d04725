@@ -1,0 +1,29 @@
+package service;
+
+public class RecentServiceImpl implements RecentService{
+
+private static RecentListServiceImpl instance;
+	
+	private RecentListServiceImpl(){
+		
+	}
+	
+	public static RecentListServiceImpl getInstance(){
+		if(instance == null)
+		{
+			instance = new RecentListServiceImpl();
+		}
+		return instance;
+	}
+	
+	RecentListDao spListDao = RecentListDaoImpl.getInstance();		//인스턴스 객체를 생성하기위한 문장
+															//getInstance()메서드를 사용하여 instance값이 null일 경우에만
+															//새로 객체를 생성한다.
+	
+	@Override
+	public void inputRecent(RecentVO recent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

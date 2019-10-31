@@ -1,0 +1,17 @@
+package service;
+
+public class ReviewServiceImpl implements ReviewService{
+
+	@Override
+	public void write() {
+		//리뷰 글쓰기
+		
+	}
+
+	@Override
+	public void delete() {
+		//리뷰 삭제
+		
+	}
+	
+}

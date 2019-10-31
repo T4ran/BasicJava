@@ -1,0 +1,7 @@
+package dao;
+
+import vo.RecentVO;
+
+public interface RecentDao {
+	void addList(RecentVO recent);
+}

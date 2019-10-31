@@ -1,0 +1,11 @@
+package controller;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		System.out.println("=================================================");
+		System.out.println("번호\t책번호\t책제목\t\t\t수량\t가격");
+		System.out.println("=================================================");
+	}
+
+}

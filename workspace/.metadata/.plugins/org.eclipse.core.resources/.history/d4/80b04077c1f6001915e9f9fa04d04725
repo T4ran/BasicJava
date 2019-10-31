@@ -1,0 +1,11 @@
+package dao;
+
+public class BookDaoImpl implements BookDao{
+
+	@Override
+	public void rtnBookSize() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

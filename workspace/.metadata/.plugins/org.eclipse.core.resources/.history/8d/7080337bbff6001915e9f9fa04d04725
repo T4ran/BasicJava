@@ -1,0 +1,13 @@
+package service;
+
+import vo.RecentVO;
+
+public class RecentServiceImpl implements RecentService{
+
+	@Override
+	public void inputRecent(RecentVO recent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package controller;
+
+import service.SPListService;
+import service.SPListServiceImpl;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		SPListService spListService = SPListServiceImpl.getInstance();
+		
+		spListService.viewSPList();
+	}
+
+}

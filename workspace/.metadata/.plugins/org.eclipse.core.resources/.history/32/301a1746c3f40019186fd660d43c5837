@@ -1,0 +1,11 @@
+/*
+작성자 : 한승희
+데이터베이스에서 장바구니의 데이터에 접근하기위한 기능을 담은 인터페이스
+ */
+package dao;
+
+//import vo.SPListVO;
+
+public interface SPListDao {
+	//SPListVO method(메서드이름)(파라미터);
+}

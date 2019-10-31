@@ -1,0 +1,30 @@
+package dao;
+
+import vo.RecentListVO;
+import data.Database;
+
+public class RecentListDaoImpl implements RecentListDao {
+
+	private static RecentListDaoImpl instance;
+	
+	private RecentListDaoImpl(){
+		
+	}
+	
+	public static RecentListDaoImpl getInstance(){
+		if(instance == null)
+		{
+			instance = new RecentListDaoImpl();
+		}
+		return instance;
+	}
+	
+	Database database = Database.getInstance();
+
+	@Override
+	public RecentListVO getRecentList(String key1, String value1, String key2, int number) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

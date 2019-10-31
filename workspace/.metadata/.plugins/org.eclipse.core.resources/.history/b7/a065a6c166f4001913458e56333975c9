@@ -1,0 +1,8 @@
+package vo;
+
+public class SPListVO {
+	private int number;
+	private int splistNumber;
+	private String userId;
+	
+}

@@ -1,0 +1,16 @@
+package controller;
+
+import service.RecentListService;
+import service.RecentListServiceImpl;
+import service.SPListService;
+import service.SPListServiceImpl;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		RecentListService spListService = RecentListServiceImpl.getInstance();
+		
+		spListService.viewRecentList("admin");
+	}
+
+}

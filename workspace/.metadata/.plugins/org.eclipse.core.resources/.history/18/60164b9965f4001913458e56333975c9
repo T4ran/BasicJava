@@ -1,0 +1,132 @@
+/*
+실질적인 데이터를 저장하는 장소
+*/
+package data;
+
+import java.util.ArrayList;
+
+import vo.BookVO;
+import vo.FAQVO;
+import vo.NoticeVO;
+import vo.QNAVO;
+import vo.RecentListVO;
+import vo.RecentVO;
+import vo.ReviewVO;
+import vo.SPListVO;
+import vo.UserVO;
+
+public class Database {
+
+	private static Database instance;
+		
+	private Database(){
+			
+	}
+		
+	public static Database getInstance(){
+		if(instance == null)
+		{
+			instance = new Database();
+		}
+		return instance;
+	}
+	public ArrayList<UserVO> tb_user = new ArrayList<UserVO>();				//회원정보
+	public ArrayList<BookVO> tb_bookList = new ArrayList<BookVO>();			//책 정보
+	public ArrayList<ReviewVO> tb_reviewList = new ArrayList<ReviewVO>();	//리뷰
+	public ArrayList<NoticeVO> tb_noticeList = new ArrayList<NoticeVO>();   //공지사항
+	public ArrayList<FAQVO> tb_faqList = new ArrayList<FAQVO>(); 			//FAQ
+	public ArrayList<QNAVO> tb_qnaList = new ArrayList<QNAVO>();			//QNA
+	public ArrayList<SPListVO> tb_spList = new ArrayList<SPListVO>();		//장바구니
+	public ArrayList<RecentVO> tb_recent = new ArrayList<RecentVO>();		//구매내역_내용
+	public ArrayList<RecentListVO> tb_recentList = new ArrayList<RecentListVO>();	//구매내역_리스트
+	
+	//public ArrayList<HelpVO> tb_helpList = new ArrayList<HelpVO>();			//고객센터
+	
+	{											//회원리스트 초기화
+		UserVO user = new UserVO();				//초기화 할때마다 인스턴스 객체 생성
+		user.setId("admin");
+		user.setPassword("admin");
+		user.setName("admin");
+		user.setEmail("admin@admin.com");
+		user.setGrade(5);
+		user.setMileage(0);
+		tb_user.add(user);
+		
+		UserVO user2 = new UserVO();				//초기화 할때마다 인스턴스 객체 생성
+		user2.setId("guest");
+		user2.setPassword("guest");
+		user2.setName("guest");
+		user2.setEmail("guest@guest.com");
+		user2.setGrade(1);							//등급은 1~5(5는 관리자)
+		user2.setMileage(0);
+		tb_user.add(user2);
+	}
+	
+	{		//20개씩 2*5*10 = 100개				//책 리스트 초기화
+		BookVO book = new BookVO();
+		book.setTitle("국내도서_문학_제목");
+		book.setWriter("저자");
+		book.setPublisher("출판사");
+		book.setPrice(10000);			//가격
+		book.setStock(5);				//재고
+	}
+	
+	/*{											//고객센터 초기화
+		HelpVO help = new HelpVO();
+		help.setNumber(0);
+		help.setTitle("공지사항_공지");			//공지사항, FAQ, 1:1문의 _로 구분
+		help.setDate("yyyy-MM-dd");
+		help.setContents("내용");
+	}*/
+	
+	{											//리뷰 초기화
+		ReviewVO review = new ReviewVO();
+		review.setBookNumber(0);
+		review.setWriter("작성자");
+		review.setDate("yyyy-MM-dd");
+		review.setRating(5.0);					//평점 5.0점 만점
+		review.setContents("리뷰 내용");
+	}
+	{
+		NoticeVO notice = new NoticeVO();
+		notice.setWriter("작성자");
+		notice.setTitle("샘플 제목");
+		notice.setContents("샘플 내용");
+		notice.setNumber(1); // 공지사항 순서
+		notice.setDate("yyyy-MM-dd");
+	}
+	{
+		FAQVO faq = new FAQVO();
+		faq.setWriter("작성자");
+		faq.setTitle("FAQ 제목");
+		faq.setContents("FAQ 내용");
+		faq.setNumber(1); // faq 순서
+	}
+	{
+		QNAVO qna = new QNAVO();
+		qna.setTitle("QNA 제목");
+		qna.setWriter("qna 작성자");
+		qna.setAnswer("답변자");
+		qna.setDate("qna 작성날짜");
+		qna.setqContents("qna 내용");
+		qna.setaContents("답변내용");
+		qna.setNumber(1); // qna 순서
+	}
+	{
+		SPListVO splist = new SPListVO();
+		splist.setUserId("admin");
+		splist.setNumber(1); // 장바구니 순서
+		splist.setPrice(10000); // 장바구니 전체 가격
+		splist.setStock(0); // 장바구니 구매수량
+		splist.setBookNumber(0);// 장바구니에 담은 책 번호
+	}
+	{
+		RecentVO recent = new RecentVO();
+		recent.setUserId("admin");
+		recent.setDate("구매날짜"); // 구매 날짜
+		recent.setNumber(1); // 구매 순서
+		recent.setPrice(10000); // 구매 가격
+		recent.setBookNumber(0);//구매한 책 번호
+		
+	}
+}

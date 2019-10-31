@@ -1,0 +1,7 @@
+package dao;
+
+//import vo.SPListVO;
+
+public interface SPListDao {
+	//SPListVO(변수타입) method(메서드이름)(파라미터);
+}

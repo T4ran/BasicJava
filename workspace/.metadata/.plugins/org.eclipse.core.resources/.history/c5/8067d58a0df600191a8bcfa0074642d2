@@ -1,0 +1,7 @@
+package dao;
+
+import vo.RecentListVO;
+
+public interface RecentListDao {
+	RecentListVO getRecentList(String key1, String value1, String key2, int number);
+}

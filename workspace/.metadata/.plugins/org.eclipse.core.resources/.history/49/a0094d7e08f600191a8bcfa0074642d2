@@ -1,0 +1,10 @@
+package dao;
+
+public class RecentListDaoImpl {
+
+	public static RecentListDao getInstance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
